@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #111;
+  color: #00f0ff;
+  padding: 20px 0;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 10px 15px;
+}
+
+nav ul li a {
+  color: #00f0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+  color: #00f0ff;
+  padding: 100px 0;
+  text-align: center;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+.hero h2 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Sections */
+.about, .cars, .contact {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 40px 0;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about p, .cars h2 {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* Cars Section */
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.car-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.car-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.car-card h3 {
+  color: #00f0ff;
+}
+
+.car-card p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.car-card button {
+  background-color: #00f0ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.car-card button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #00f0ff;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+}
+
+.contact button {
+  background-color: #00f0ff;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #888;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer .socials a {
+  color: #00f0ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .car-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about, .cars, .contact {
+  opacity: 0;
+  transform: translateY(30px);
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Header Line Animation */
+.header-line-container {
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.header-line {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transform: translateX(-100%);
+  animation: slideLine 2s ease-out forwards;
+}
+
+@keyframes slideLine {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.car-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+.car-card button {
+  margin-top: 10px;
+}
+
+.car-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+  color: #ccc;
+  font-size: 0.95em;
+}
+

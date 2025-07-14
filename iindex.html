@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City Auto Sales</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-line-container">
+  <div class="header-line"></div>
+</div>
+    <div class="container">
+      <h1>City Auto Sales</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Find Your Dream Car Today</h2>
+      <p>Browse our collection of quality used and new cars.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>City Auto Sales has been serving customers with quality vehicles and service since 2025. Our mission is to provide top-notch vehicles at unbeatable prices. Visit us and experience honest service from a family-owned business.</p>
+    </div>
+  </section>
+
+  <section id="inventory" class="cars">
+    <div class="container">
+      <h2>Featured Vehicles</h2>
+      <div class="car-list">
+        <div class="car-card">
+  <img src="https://www.financialexpress.com/wp-content/uploads/2024/07/Porsche-Panamera-GTS.jpg" alt="Porsche Panamera GTS">
+  <h3>Porsche Panamera GTS</h3>
+  <p>₹ 2.34 Cr</p>
+
+  <!-- Hidden info section -->
+  <div class="car-info" style="display: none;">
+    <ul style="list-style: disc; padding-left: 20px; text-align: left; font-size: 0.95em; color: #ccc;">
+      <li>Engine: 4.0L V8 Twin-Turbo</li>
+      <li>Power: 473 bhp @ 6,500 rpm</li>
+      <li>Transmission: 8-speed PDK Automatic</li>
+      <li>Acceleration: 0–100 km/h in 3.9s</li>
+      <li>Top Speed: 300 km/h</li>
+      <li>Drivetrain: All-Wheel Drive (AWD)</li>
+      <li>Features: Adaptive air suspension, Porsche Torque Vectoring, Sport Chrono Package</li>
+    </ul>
+  </div>
+
+  <button onclick="toggleInfo(this)">More Info</button>
+</div>
+
+        <div class="car-card">
+  <img src="https://images.clickdealer.co.uk/vehicles/6431/6431878/large2/153051386.jpg" alt="BMW M5 Competition">
+  <h3>BMW M5 Competition</h3>
+  <p>₹ 2.01 Cr</p>
+
+  <!-- Hidden info section -->
+  <div class="car-info" style="display: none;">
+    <ul style="list-style: disc; padding-left: 20px; text-align: left; font-size: 0.95em; color: #ccc;">
+      <li>Engine: 4.4L Twin-Turbo V8</li>
+      <li>Power: 625 bhp @ 6,000 rpm</li>
+      <li>Transmission: 8-speed M Steptronic</li>
+      <li>Acceleration: 0–100 km/h in 3.3s</li>
+      <li>Top Speed: 305 km/h (with M Driver’s Package)</li>
+      <li>Drivetrain: M xDrive AWD with RWD mode</li>
+      <li>Features: Adaptive suspension, M Sport exhaust, Carbon-fiber roof</li>
+    </ul>
+  </div>
+
+  <button onclick="toggleInfo(this)">More Info</button>
+</div>
+
+        <div class="car-card">
+  <img src="https://mediapool.bmwgroup.com/cache/P9/202209/P90479606/P90479606-the-new-bmw-m340i-xdrive-09-2022-600px.jpg" alt="BMW M340i xDrive">
+  <h3>BMW M340i xDrive</h3>
+  <p>₹69 Lakh</p>
+
+  <!-- Hidden info section -->
+  <div class="car-info" style="display: none;">
+    <ul style="list-style: disc; padding-left: 20px; text-align: left; font-size: 0.95em; color: #ccc;">
+      <li>Engine: 3.0L Inline-6 TwinPower Turbo</li>
+      <li>Power: 387 bhp @ 5,800 rpm</li>
+      <li>Transmission: 8-speed Steptronic Sport Auto</li>
+      <li>Acceleration: 0–100 km/h in 4.4s</li>
+      <li>Top Speed: 250 km/h (electronically limited)</li>
+      <li>Drivetrain: xDrive AWD</li>
+      <li>Features: Launch Control, M Sport Differential, Adaptive M Suspension</li>
+    </ul>
+  </div>
+
+  <button onclick="toggleInfo(this)">More Info</button>
+</div>
+        <div class="car-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png/330px-2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png" alt="Toyota Land Cruiser 300">
+  <h3>Toyota Land Cruiser 300</h3>
+  <p>₹ 2.65 Cr</p>
+
+  <!-- Hidden info section -->
+  <div class="car-info" style="display: none;">
+    <ul style="list-style: disc; padding-left: 20px; text-align: left; font-size: 0.95em; color: #ccc;">
+      <li>Engine: 3.3L V6 Twin-Turbo Diesel / 3.5L V6 Twin-Turbo Petrol</li>
+      <li>Power: 305 bhp (diesel) / 409 bhp (petrol)</li>
+      <li>Transmission: 10-speed Automatic</li>
+      <li>Acceleration: 0–100 km/h in ~6.7s (petrol)</li>
+      <li>Drivetrain: Full-Time 4WD with Multi-Terrain Select</li>
+      <li>Features: Crawl Control, Adaptive Variable Suspension, Premium leather interiors, 12.3” infotainment</li>
+    </ul>
+  </div>
+
+  <button onclick="toggleInfo(this)">More Info</button>
+</div>
+
+        <div class="car-card">
+  <img src="https://acko-cms.ackoassets.com/BMW_X7_2ff12d5721.png" alt="BMW X7">
+  <h3>BMW X7 XDrive40i</h3>
+  <p>₹ 97 Lakh</p>
+
+  <!-- Hidden info section -->
+  <div class="car-info" style="display: none;">
+    <ul style="list-style: disc; padding-left: 20px; text-align: left; font-size: 0.95em; color: #ccc;">
+      <li>Engine: 3.0L Inline-6 TwinPower Turbo (xDrive40i)</li>
+      <li>Power: 381 bhp @ 5,200–6,250 rpm</li>
+      <li>Transmission: 8-speed Steptronic Automatic</li>
+      <li>Acceleration: 0–100 km/h in 5.8s</li>
+      <li>Top Speed: 250 km/h (electronically limited)</li>
+      <li>Drivetrain: xDrive All-Wheel Drive</li>
+      <li>Features: 6/7-seater luxury SUV, Panoramic sunroof, Bowers & Wilkins audio, Rear-seat entertainment</li>
+    </ul>
+  </div>
+
+  <button onclick="toggleInfo(this)">More Info</button>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+  <div class="container">
+    <p>&copy; 2025 City Auto Sales. Owned By Athiii.</p>
+    
+    <!-- 📞 Contact Number -->
+    <p>Contact: <a href="tel:+1234567890" style="color: #00f0ff;">+91 7796851233</a></p>
+    
+    <div class="socials">
+      <a href="#">Facebook</a> | 
+      <a href="https://www.instagram.com/atharv__22_">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+  
+    function toggleInfo(button) {
+  const info = button.previousElementSibling;
+  if (info.style.display === 'none' || info.style.display === '') {
+    info.style.display = 'block';
+    button.textContent = 'Less Info';
+  } else {
+    info.style.display = 'none';
+    button.textContent = 'More Info';
+  }
+}
+
+  // Fade in sections on scroll
+  const sections = document.querySelectorAll('.about, .cars, .contact');
+
+  const showOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    sections.forEach(section => {
+      const boxTop = section.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', showOnScroll);
+  window.addEventListener('load', showOnScroll);
+</script>
+</body>
+</html>
